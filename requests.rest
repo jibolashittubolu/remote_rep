@@ -1,0 +1,207 @@
+//NORMAL SERVER
+###
+GET http://localhost:5000/api/aime
+
+
+//NORMAL SERVER
+###
+GET http://localhost:5000/api/posts
+
+
+//NORMAL SERVER
+### admin
+GET http://localhost:5000/api/admin
+
+
+// AUTH SERVER
+### LOGIN
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "kamila@finixio.com",
+    "password": "abc"
+}
+
+
+### REGISTER 
+POST http://localhost:5000/api/register
+Content-Type: application/json
+ 
+{
+    "user_name": "Bolu",
+    "email": "a@dsa.com",
+    "password": "admin",
+    "subscribe_to_mail_list": "true"
+}
+
+
+### RESEND VERIFICATION MAIL
+POST http://localhost:5000/api/register/verify/resend
+Content-Type: application/json
+
+{
+    "email": "kamila@finixio.com"
+}
+
+### VERIFY TOKEN VIA EMAIL
+GET http://localhost:5000/api/register/verify-token/abc
+Content-Type: application/json
+
+{
+}
+
+
+### FORGOT PASSWORD
+POST http://localhost:5000/api/forgot-password
+Content-Type: application/json
+
+{
+    "email": "kamila@finixio.com"
+}
+
+
+### RESET PASSWORD at email mid
+GET http://localhost:5000/api/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthbWlsYUBmaW5peGlvLmNvbSIsImlhdCI6MTY2NTYzMDU1NCwiZXhwIjoxNjY4OTYzODg5fQ.kOQ8bXw5EiDQqQeDh-qm8PXgKwVK17qKB8rAaTKkVrg
+Content-Type: application/json
+
+{
+}
+
+
+### RESET PASSWORD final
+POST http://localhost:5000/api/reset-password/
+Content-Type: application/json
+
+{
+    "password": "abc"
+}
+
+
+### LOGOUT
+DELETE  http://localhost:5000/api/logout
+
+### VERIFY TOKEN VIA EMAIL
+GET http://localhost:5000/api/register/verify-token/abc
+Content-Type: application/json
+
+{
+}
+
+
+### SUBSCRIBER SUBSCRIBE
+POST http://localhost:5000/api/subscriber-register
+Content-Type: application/json
+
+{
+    "email": "a@a.com",
+    "subscriber_name": "Bolensy"
+}
+
+### SUBSCRIBER UNSUB START
+GET http://localhost:5000/api/subscriber-unsub/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthbWlsQGZpbml4aW8uY29tIiwiaWF0IjoxNjY1NjM0MjU5LCJleHAiOjQ4MjEzOTQyNTl9.re12HO12OK06L_NwoWcq3LNz1mF3xzvqlHWViF9Kmks
+Content-Type: application/json
+
+{
+}
+
+### SUBSCRIBER UNSUB END
+POST http://localhost:5000/api/subscriber-unsub/
+Content-Type: application/json
+
+{
+    "unsubscribe": "true"
+}
+
+
+### SEND PROMOTIONAL MAIL
+POST http://localhost:5000/api/send-promotional-mail/
+Content-Type: application/json
+
+{
+}
+
+
+### RESEND PROMOTIONAL MAIL RESEND
+POST http://localhost:5000/api/resend-promotional-mail/
+Content-Type: application/json
+
+{
+}
+
+
+### UPDATE EMAIL start
+POST http://localhost:5000/api/update-email-start/
+Content-Type: application/json
+
+{
+    "new_email": "hello@gmail.com",
+    "password": "abc"
+}
+
+### UPDATE EMAIL middle
+GET  http://localhost:5000/api/update-email-middle/:update_token
+Content-Type: application/json
+
+{
+    "new_email": "hello@gmail.com",
+    "password": "abc"
+}
+
+### UPDATE EMAIL final
+GET http://localhost:5000/api/update-email-final/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthbWlsYUBmaW5peGlvLmNvbSIsIm5ld19lbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlhdCI6MTY2NzI0MzIwOCwiZXhwIjoxNjY3MjQzNTA4fQ.TwFXH21ae2CR2tXRu4QkFqHwT5f-W6ZKKVYmcC__Ub4
+Content-Type: application/json
+
+{
+    "new_email": "hello@gmail.com",
+    "password": "abc"
+}
+
+
+### UPDATE EMAIL last
+POST http://localhost:5000/api/update-email
+Content-Type: application/json
+
+{
+    "new_email": "helloS@gmail.com",
+    "password": "abc"
+}
+
+
+###Test live Email
+POST http://localhost:5000/api/test_api
+Content-Type: application/json
+
+{
+    "accessKey": "Mazi", 
+    "email": "jibolaltd@gmail.com"
+}
+
+
+
+### DEP
+### SEND VERIFICATION MAIL
+POST http://localhost:5000/api/register/verify
+Content-Type: application/json
+
+{
+    "email": "jsb@gmail.com"
+}
+
+
+### DEP
+### REFRESH TOKEN
+POST http://localhost:5001/api/refresh-token
+Content-Type: application/json
+
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "admin",
+    "password": "admin"
+}
+
+
+
