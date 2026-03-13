@@ -3,7 +3,6 @@ const express = require('express')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const createError = require('./utils/createError.js')
-
 // import cors from 'cors'
 
 const app = express();
